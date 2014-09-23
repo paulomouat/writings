@@ -5,25 +5,24 @@
 <meta charset="UTF-8"/>
 <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic|Cinzel' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="writings.css"/>
-<script language="JavaScript">
-<!--
-function toggle( ref, state, target )
-{
-	if( state == "open" )
-	{
-		document.getElementById( target ).style.display = "none";
-		ref.setAttribute( "state", "closed" );	
-		ref.setAttribute( "src", "images/down.gif" );	
-	}
-	else
-	{
-		document.getElementById( target ).style.display = "block";
-		ref.setAttribute( "state", "open" );
-		ref.setAttribute( "src", "images/up.gif" );	
-	}
-}
-//-->
-</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$(".title").click(function () {
+
+    $title = $(this);
+    //getting the next element
+    $item = $title.next();
+    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+    $item.slideToggle(500, function () {
+        //execute this after slideToggle is done
+        //change text of header based on visibility of content div
+        $title.text(function () {
+            //change text based on condition
+            return $item.is(":visible") ? "Collapse" : "Expand";
+        });
+    });
+
+});</script>
 </head>
 <body>
 	<div class="header">w r i t i n g s</div>
@@ -36,183 +35,173 @@ function toggle( ref, state, target )
 					(click on the arrow to the left of the category title to open each section).
 		</div>
 		<div class="spacer"></div>
-		<div class="title">
-			<img src="images/down.gif" target="technology" state="closed" onMouseUp="toggle( this, this.getAttribute( 'state' ), this.getAttribute( 'target' ) )"/>
-			Technology
+		<div class="items">
+			<div class="title">Technology</div>
+			<div class="item">
+				<div class="text">
+					Here are links for a few articles I've been writing on several topics
+	        	    related to open source in the enterprise with the occasional
+	            	journalistic take on current issues of the community.  They are
+		            published at the <a href="http://www.aliceramos.com" target="_blank">AliceRamos.com</a>
+					IT newsletter (in portuguese).
+				</div>
+				<blockquote class="text">
+					<a href="http://www.aliceramos.com/sworld/0011.asp" target="_blank">Software livre: evitando o <i>vendor lock-in</i></a><br/>
+					<a href="http://www.aliceramos.com/sworld/0013.asp" target="_blank">O suporte no mundo do software livre</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0014.asp" target="_blank">Desvantagens do Linux</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0015.asp" target="_blank">SCO vs. IBM e o Linux</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0017.asp" target="_blank">O pôr-do-sol</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0016.asp" target="_blank">Licenciamento no software livre, 1ª parte</a>, 
+					<a href="http://www.aliceramos.com/sworld/0018.asp" target="_blank">2ª parte</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0019.asp" target="_blank">Uma proposta recusável: SCO vs Linux</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0020.asp" target="_blank">Microsoft: mais fatos e menos emoção</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0021.asp" target="_blank">Linux vale dinheiro real</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0022.asp" target="_blank">Office 2003: A via do lock-in</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0023.asp" target="_blank">Linux: O verdadeiro custo da mudança, 1ª parte</a>,
+					<a href="http://www.aliceramos.com/sworld/0024.asp" target="_blank">2ª parte</a>,
+					<a href="http://www.aliceramos.com/sworld/0025.asp" target="_blank">3ª parte</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0026.asp" target="_blank">Novell renasce através do Linux</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0027.asp" target="_blank">Briga entre a SCO e a IBM tem novo round</a><br/>
+					<a href="http://www.aliceramos.com/sworld/0028.asp" target="_blank">Segurança afeta o balanço final da Microsoft</a><br/>
+				</blockquote>
+			</div>
+			<div class="title">Music</div>
+			<div class="item">
+				<div class="text">
+					Some <a href="http://www.interdisciplina.org/p_mouat/music/music_thoughts.html" target="_blank">thoughts</a>
+	        	    and a <a href="http://www.interdisciplina.org/p_mouat/showcase/manifesto.html" target="_blank">manifesto</a>.
+				</div>
+				<br/>
+				<div class="text">
+					The following are articles that were to be published in the portuguese hi-fi
+					magazine <i>Audio</i> ca.&nbsp;1995.  The first one is the presentation article that I sent
+					to the magazine when I knew of an open position for a writer. They liked the
+					article and that relationship resulted in my following it with 3 more articles
+					(in portuguese).
+				</div>
+				<blockquote class="text">
+					<table>
+						<tr>
+							<td>
+								Decomposição Musical
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="decomposicao.html" target="_blank">HTML</a>
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="decomposicao.pdf" target="_blank">PDF</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Ouvir
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="ouvir.html" target="_blank">HTML</a>
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="ouvir.pdf" target="_blank">PDF</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								O Pensamento Musical no Séc. XX, parte I
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="pensamento.html" target="_blank">HTML</a>
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="pensamento.pdf" target="_blank">PDF</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								O Pensamento Musical no Séc. XX, parte II (draft)
+							</td>
+							<td width="10px"/>
+							<td>
+								HTML
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="pensamento2.pdf" target="_blank">PDF</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								O Pensamento Musical no Séc. XX, parte III (draft)
+							</td>
+							<td width="10px"/>
+							<td>
+								HTML
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="pensamento3.pdf" target="_blank">PDF</a>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								O Som do Electrão
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="electrao.html" target="_blank">HTML</a>
+							</td>
+							<td width="10px"/>
+							<td>
+								<a href="electrao.pdf" target="_blank">PDF</a>
+							</td>
+						</tr>
+					</table>
+				</blockquote>
+			</div>
+			<div class="title">Poetry</div>
+			<div class="item">
+				<div class="text">			
+					Miscellaneous poetry on physics, mathematics, time and the stone, ca. 1991.
+				</div>
+				<blockquote class="text">
+					<a href="http://www.interdisciplina.org/p_mouat/showcase/r01.html" target="_blank">Iterativ</a><br/>
+					<a href="http://www.interdisciplina.org/p_mouat/showcase/r03.html" target="_blank">Space And Time</a><br/>
+					<a href="http://www.interdisciplina.org/p_mouat/showcase/s01.html" target="_blank">Moondial</a><br/>
+					<a href="http://www.interdisciplina.org/p_mouat/showcase/s03.html" target="_blank">Masonic Gardens</a><br/>
+				</blockquote>
+				<div class="text">
+					Classic romantic poetry, ca. 1998.
+				</div>
+				<blockquote class="text">
+					<a href="sonnet1.html" target="_blank">Sonnet I</a> (published
+					in 1999 on a compilation book from <a href="http://www.poetry.com" target="_blank">poetry.com</a>)<br/>
+					<a href="sonnet2.html" target="_blank">Sonnet II</a><br/>
+					<a href="sonnet3.html" target="_blank">Sonnet III</a><br/>
+					<a href="odearest.html" target="_blank">O dearest</a><br/>
+					<a href="formc.html" target="_blank">For M.C.</a><br/>
+				</blockquote>
+			</div>
+			<div class="title">Weblog</div>
+			<div class="item">
+				<div class="text">
+					Snippets, notes, thoughts, not all of them mine.  My repository of <i>interesting</i>
+					material found on the internet and elsewhere.
+				</div>
+				<blockquote class="text">
+					<a href="http://www.dmethods.com/tangents/" target="_blank">Tangents Weblog</a><br/>
+				</blockquote>
+				<div class="text">
+					A day-to-day account of personal events and activities.
+				</div>
+				<blockquote class="text">
+					<a href="http://www.dmethods.com/eitheror/" target="_blank">Either/Or</a><br/>
+				</blockquote>
+			</div>
 		</div>
-		<span id="technology" style="display: none">
-			<div class="text">
-				Here are links for a few articles I've been writing on several topics
-        	    related to open source in the enterprise with the occasional
-            	journalistic take on current issues of the community.  They are
-	            published at the <a href="http://www.aliceramos.com" target="_blank">AliceRamos.com</a>
-				IT newsletter (in portuguese).
-			</div>
-			<blockquote class="text">
-				<a href="http://www.aliceramos.com/sworld/0011.asp" target="_blank">Software livre: evitando o <i>vendor lock-in</i></a><br/>
-				<a href="http://www.aliceramos.com/sworld/0013.asp" target="_blank">O suporte no mundo do software livre</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0014.asp" target="_blank">Desvantagens do Linux</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0015.asp" target="_blank">SCO vs. IBM e o Linux</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0017.asp" target="_blank">O pôr-do-sol</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0016.asp" target="_blank">Licenciamento no software livre, 1ª parte</a>, 
-				<a href="http://www.aliceramos.com/sworld/0018.asp" target="_blank">2ª parte</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0019.asp" target="_blank">Uma proposta recusável: SCO vs Linux</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0020.asp" target="_blank">Microsoft: mais fatos e menos emoção</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0021.asp" target="_blank">Linux vale dinheiro real</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0022.asp" target="_blank">Office 2003: A via do lock-in</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0023.asp" target="_blank">Linux: O verdadeiro custo da mudança, 1ª parte</a>,
-				<a href="http://www.aliceramos.com/sworld/0024.asp" target="_blank">2ª parte</a>,
-				<a href="http://www.aliceramos.com/sworld/0025.asp" target="_blank">3ª parte</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0026.asp" target="_blank">Novell renasce através do Linux</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0027.asp" target="_blank">Briga entre a SCO e a IBM tem novo round</a><br/>
-				<a href="http://www.aliceramos.com/sworld/0028.asp" target="_blank">Segurança afeta o balanço final da Microsoft</a><br/>
-			</blockquote>
-		</span>
-		<div class="title">
-			<img src="images/down.gif" target="music" state="closed" onMouseUp="toggle( this, this.getAttribute( 'state' ), this.getAttribute( 'target' ) )"/>
-			Music
-		</div>
-		<span id="music" style="display: none">
-			<div class="text">
-				Some <a href="http://www.interdisciplina.org/p_mouat/music/music_thoughts.html" target="_blank">thoughts</a>
-        	    and a <a href="http://www.interdisciplina.org/p_mouat/showcase/manifesto.html" target="_blank">manifesto</a>.
-			</div>
-			<br/>
-			<div class="text">
-				The following are articles that were to be published in the portuguese hi-fi
-				magazine <i>Audio</i> ca.&nbsp;1995.  The first one is the presentation article that I sent
-				to the magazine when I knew of an open position for a writer. They liked the
-				article and that relationship resulted in my following it with 3 more articles
-				(in portuguese).
-			</div>
-			<blockquote class="text">
-				<table>
-					<tr>
-						<td>
-							Decomposição Musical
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="decomposicao.html" target="_blank">HTML</a>
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="decomposicao.pdf" target="_blank">PDF</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							Ouvir
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="ouvir.html" target="_blank">HTML</a>
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="ouvir.pdf" target="_blank">PDF</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							O Pensamento Musical no Séc. XX, parte I
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="pensamento.html" target="_blank">HTML</a>
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="pensamento.pdf" target="_blank">PDF</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							O Pensamento Musical no Séc. XX, parte II (draft)
-						</td>
-						<td width="10px"/>
-						<td>
-							HTML
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="pensamento2.pdf" target="_blank">PDF</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							O Pensamento Musical no Séc. XX, parte III (draft)
-						</td>
-						<td width="10px"/>
-						<td>
-							HTML
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="pensamento3.pdf" target="_blank">PDF</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							O Som do Electrão
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="electrao.html" target="_blank">HTML</a>
-						</td>
-						<td width="10px"/>
-						<td>
-							<a href="electrao.pdf" target="_blank">PDF</a>
-						</td>
-					</tr>
-				</table>
-			</blockquote>
-		</span>
-		<div class="title">
-			<img src="images/down.gif" target="poetry" state="closed" onMouseUp="toggle( this, this.getAttribute( 'state' ), this.getAttribute( 'target' ) )"/>
-			Poetry
-		</div>
-		<span id="poetry" style="display: none">
-			<div class="text">			
-				Miscellaneous poetry on physics, mathematics, time and the stone, ca.&nbsp;1991.
-			</div>
-			<blockquote class="text">
-				<a href="http://www.interdisciplina.org/p_mouat/showcase/r01.html" target="_blank">Iterativ</a><br/>
-				<a href="http://www.interdisciplina.org/p_mouat/showcase/r03.html" target="_blank">Space And Time</a><br/>
-				<a href="http://www.interdisciplina.org/p_mouat/showcase/s01.html" target="_blank">Moondial</a><br/>
-				<a href="http://www.interdisciplina.org/p_mouat/showcase/s03.html" target="_blank">Masonic Gardens</a><br/>
-			</blockquote>
-			<div class="text">			
-				Classic romantic poetry, ca.&nbsp;1998.
-			</div>
-			<blockquote class="text">
-				<a href="sonnet1.html" target="_blank">Sonnet I</a> (published
-				in 1999 on a compilation book from <a href="http://www.poetry.com" target="_blank">poetry.com</a>)<br/>
-				<a href="sonnet2.html" target="_blank">Sonnet II</a><br/>
-				<a href="sonnet3.html" target="_blank">Sonnet III</a><br/>
-				<a href="odearest.html" target="_blank">O dearest</a><br/>
-				<a href="formc.html" target="_blank">For M.C.</a><br/>
-			</blockquote>
-		</span>
-		<div class="title">
-			<img src="images/down.gif" target="weblog" state="closed" onMouseUp="toggle( this, this.getAttribute( 'state' ), this.getAttribute( 'target' ) )"/>
-			Weblog
-		</div>
-		<span id="weblog" style="display: none">
-			<div class="text">			
-				Snippets, notes, thoughts, not all of them mine.  My repository of <i>interesting</i>
-				material found on the internet and elsewhere.
-			</div>
-			<blockquote class="text">
-				<a href="http://www.dmethods.com/tangents/" target="_blank">Tangents Weblog</a><br/>
-			</blockquote>
-			<div class="text">			
-				A day-to-day account of personal events and activities.
-			</div>
-			<blockquote class="text">
-				<a href="http://www.dmethods.com/eitheror/" target="_blank">Either/Or</a><br/>
-			</blockquote>
-		</span>
 	</div>
 </body>
 </html>
