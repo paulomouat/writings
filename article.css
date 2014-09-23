@@ -1,0 +1,79 @@
+body {
+	font-family: 'Crimson Text', serif;
+	font-size: 20px;
+	text-align: justify;
+}
+
+strong {
+	line-height: 100%;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q:before {
+    content: open-quote;
+}
+
+q:after {
+    content: close-quote;
+}
+
+blockquote {
+	font-size: 90%;
+}
+
+hr.center {
+    text-align: center;
+	margin: 2.2em 10em 2em 10em;
+}
+
+hr.left {
+    text-align: center;
+	margin: 2.2em 20em 2em 0em;
+}
+
+ul.no-bullet {
+	list-style-type: none;
+}
+
+.title {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+.subtitle {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.byline {
+	font-size: 80%;
+	margin: 0em, 0.8em;
+}
+
+.section {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 100%;
+	font-weight: bold;
+}
+
+.content {
+	width: 35em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.references {
+	font-size: 80%;
+}
+
+.end-marker:after {
+	float: right;
+	content: "■";
+	font-size: 140%;
+	line-height: 100%;
+}
