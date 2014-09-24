@@ -6,23 +6,7 @@
 <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,700,700italic|Cinzel' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="writings.css"/>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-$(".title").click(function () {
-
-    $title = $(this);
-    //getting the next element
-    $item = $title.next();
-    //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
-    $item.slideToggle(500, function () {
-        //execute this after slideToggle is done
-        //change text of header based on visibility of content div
-        $title.text(function () {
-            //change text based on condition
-            return $item.is(":visible") ? "Collapse" : "Expand";
-        });
-    });
-
-});</script>
+<script src="behavior.js"></script>
 </head>
 <body>
 	<div class="header">w r i t i n g s</div>
@@ -32,11 +16,11 @@ $(".title").click(function () {
 		<div class="text"><span class="lead">This page collects</span>
 					some of my writings, past and present, published and unpublished.  It contains
 					articles, musings and essays, divided in four broad categories for an easy perusal
-					(click on the arrow to the left of the category title to open each section).
+					(click on the section titles to open them).
 		</div>
 		<div class="spacer"></div>
 		<div class="items">
-			<div class="title">Technology</div>
+			<div class="title">▸ Technology</div>
 			<div class="item">
 				<div class="text">
 					Here are links for a few articles I've been writing on several topics
@@ -65,7 +49,7 @@ $(".title").click(function () {
 					<a href="http://www.aliceramos.com/sworld/0028.asp" target="_blank">Segurança afeta o balanço final da Microsoft</a><br/>
 				</blockquote>
 			</div>
-			<div class="title">Music</div>
+			<div class="title">▸ Music</div>
 			<div class="item">
 				<div class="text">
 					Some <a href="http://www.interdisciplina.org/p_mouat/music/music_thoughts.html" target="_blank">thoughts</a>
@@ -162,7 +146,7 @@ $(".title").click(function () {
 					</table>
 				</blockquote>
 			</div>
-			<div class="title">Poetry</div>
+			<div class="title">▸ Poetry</div>
 			<div class="item">
 				<div class="text">			
 					Miscellaneous poetry on physics, mathematics, time and the stone, ca. 1991.
@@ -185,7 +169,7 @@ $(".title").click(function () {
 					<a href="formc.html" target="_blank">For M.C.</a><br/>
 				</blockquote>
 			</div>
-			<div class="title">Weblog</div>
+			<div class="title">▸ Weblog</div>
 			<div class="item">
 				<div class="text">
 					Snippets, notes, thoughts, not all of them mine.  My repository of <i>interesting</i>

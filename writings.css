@@ -64,7 +64,8 @@ a:hover {
 .title {
 	font-size: larger;
 	font-weight: bold;
-	color: #666;
+	color: #333;
+	cursor: pointer;
 }
 
 .lead {
@@ -74,4 +75,8 @@ a:hover {
 
 .text {
 	line-height: 140%;
+}
+
+.item {
+	display: none;
 }
